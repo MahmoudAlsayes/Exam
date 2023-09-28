@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:badges/badges.dart' as badges;
 
 ///TabBar
 
@@ -14,8 +15,16 @@ class SecondScreen extends StatelessWidget {
           title: Center(child: Text("TabBar")),
           bottom: TabBar(
             tabs: [
-              Tab(
-                text: "Cat",icon: Icon(Icons.home),
+              badges.Badge(
+                badgeContent: Text(""),
+                badgeStyle: badges.BadgeStyle(
+                  shape: badges.BadgeShape.circle,
+                  badgeColor: Colors.red,
+                ),
+
+                child: Tab(
+                  text: "Cat",icon: Icon(Icons.home),
+                ),
               ),
               Tab(
                 text: "Dog",icon: Icon(Icons.list),
