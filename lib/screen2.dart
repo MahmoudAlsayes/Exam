@@ -21,33 +21,39 @@ class SecondScreen extends StatelessWidget {
                   shape: badges.BadgeShape.circle,
                   badgeColor: Colors.red,
                 ),
-
                 child: Tab(
-                  text: "Cat",icon: Icon(Icons.home),
+                  text: "Cat",
+                  icon: Icon(Icons.home),
                 ),
               ),
-              Tab(
-                text: "Dog",icon: Icon(Icons.list),
+              badges.Badge(
+                badgeContent: Icon(Icons.add,size: 15),
+                badgeStyle: badges.BadgeStyle(
+                  badgeColor: Colors.red,
+                  shape: badges.BadgeShape.instagram
+                ),
+                child: Tab(
+                  text: "Dog",
+                  icon: Icon(Icons.list),
+                ),
               ),
-              Tab(
-                text: "Caw",icon: Icon(Icons.history),
+              badges.Badge(
+                badgeContent:Icon(Icons.check, color: Colors.white, size: 10),
+                child: Tab(
+                  text: "Caw",
+                  icon: Icon(Icons.history),
+                ),
               ),
             ],
-
           ),
-
         ),
-        body: TabBarView(children:
-        [
+        body: TabBarView(children: [
           Image(image: AssetImage("assets/images/1.jpeg")),
           // Image.asset("assets/images/1.jpeg"),
           Image.asset("assets/images/2.jpeg"),
           Image.asset("assets/images/3.jpeg"),
-        ]
-        ),
+        ]),
       ),
-
     );
-
   }
 }
