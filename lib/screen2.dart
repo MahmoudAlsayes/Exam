@@ -10,51 +10,34 @@ class SecondScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        appBar: AppBar(
-          title: Center(child: Text("TabBar")),
-          bottom: TabBar(
-            tabs: [
-              badges.Badge(
-                badgeContent: Text(""),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        elevation: 0,
+
+        leading: Image.asset("assets/images/Ellipse 10.png"),
+         title: Column(
+           crossAxisAlignment: CrossAxisAlignment.start,
+
+             children: [
+
+           Text("Hello,jade",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400),),
+           Text("Ready to workout ?",style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+         ]),
+        actions: [
+          Container(
+            margin: EdgeInsets.only(right: 12, top: 12),
+            child: badges.Badge(
+
+                badgeContent: Container(color: Colors.red, height: 1),
                 badgeStyle: badges.BadgeStyle(
-                  shape: badges.BadgeShape.circle,
-                  badgeColor: Colors.red,
-                ),
-                child: Tab(
-                  text: "Cat",
-                  icon: Icon(Icons.home),
-                ),
-              ),
-              badges.Badge(
-                badgeContent: Icon(Icons.add,size: 15),
-                badgeStyle: badges.BadgeStyle(
-                  badgeColor: Colors.red,
-                  shape: badges.BadgeShape.instagram
-                ),
-                child: Tab(
-                  text: "Dog",
-                  icon: Icon(Icons.list),
-                ),
-              ),
-              badges.Badge(
-                badgeContent:Icon(Icons.check, color: Colors.white, size: 10),
-                child: Tab(
-                  text: "Caw",
-                  icon: Icon(Icons.history),
-                ),
-              ),
-            ],
+                    badgeColor: Colors.red, shape: badges.BadgeShape.instagram),
+                child: Icon(
+                  Icons.notifications_none,
+                  color: Colors.black,
+                )),
           ),
-        ),
-        body: TabBarView(children: [
-          Image(image: AssetImage("assets/images/1.jpeg")),
-          // Image.asset("assets/images/1.jpeg"),
-          Image.asset("assets/images/2.jpeg"),
-          Image.asset("assets/images/3.jpeg"),
-        ]),
+        ],
       ),
     );
   }
