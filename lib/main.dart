@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: SecondScreen.routename ,
+      initialRoute: HomeScreen.routename ,
       routes:{
         HomeScreen.routename:(context) =>HomeScreen(),
         FirstScreen.routename:(context) =>FirstScreen(),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
 
 ///TabBar
+///badge
+///
 
 class SecondScreen extends StatelessWidget {
   static const String routename = "second";
