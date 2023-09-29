@@ -1,11 +1,44 @@
 import 'package:flutter/material.dart';
 
-class ThirdScreen extends StatelessWidget {
-  static const String routename= "third";
+class ThirdScreen extends StatefulWidget {
+  static const String routename = "third";
+
+  @override
+  State<ThirdScreen> createState() => _ThirdScreenState();
+}
+
+class _ThirdScreenState extends State<ThirdScreen> {
+  bool _isSelected = false;
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text("Choice Chip")),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ChoiceChip(
+              avatar: Icon(Icons.add_circle,color: Colors.white,),
+
+              label: Text("choice chip"),
+              disabledColor: Colors.grey,
+              selectedColor: Colors.blue,
+              selected: _isSelected,
+              shadowColor: Colors.green,
+              selectedShadowColor: Colors.green,
+              onSelected: (newBoolValue) {
+
+                setState(() {
+                  _isSelected = newBoolValue;
+                });
+              },
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
-
