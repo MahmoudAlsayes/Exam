@@ -482,15 +482,15 @@ class _SecondScreenState extends State<SecondScreen> {
             label: "home",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.window),
+            icon: Icon(Icons.navigation),
             label: ".",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today_outlined),
+            icon: Icon(Icons.analytics),
             label: ".",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.calendar_today_outlined),
+            icon: Icon(Icons.person_2_outlined),
             label: ".",
           ),
         ],

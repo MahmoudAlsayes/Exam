@@ -1,4 +1,3 @@
-import 'package:exam1/home.dart';
 import 'package:exam1/screen1.dart';
 import 'package:exam1/screen2.dart';
 import 'package:exam1/screen3.dart';
@@ -16,9 +15,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: SecondScreen.routename ,
+      initialRoute: ThirdScreen.routename ,
       routes:{
-        HomeScreen.routename:(context) =>HomeScreen(),
+
         FirstScreen.routename:(context) =>FirstScreen(),
         SecondScreen.routename:(context) =>SecondScreen(),
         ThirdScreen.routename:(context) =>ThirdScreen(),
