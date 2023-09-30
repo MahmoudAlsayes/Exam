@@ -8,6 +8,8 @@ import 'package:badges/badges.dart' as badges;
 class SecondScreen extends StatefulWidget {
   static const String routename = "second";
 
+  const SecondScreen({super.key});
+
   @override
   State<SecondScreen> createState() => _SecondScreenState();
 }
@@ -22,7 +24,7 @@ class _SecondScreenState extends State<SecondScreen> {
         backgroundColor: Colors.white,
         elevation: 0,
         leading: Image.asset("assets/images/Ellipse 10.png"),
-        title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        title: const Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
             "Hello,jade",
             style: TextStyle(
@@ -38,12 +40,12 @@ class _SecondScreenState extends State<SecondScreen> {
         ]),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 12, top: 12),
+            margin: const EdgeInsets.only(right: 12, top: 12),
             child: badges.Badge(
                 badgeContent: Container(color: Colors.red, height: 1),
-                badgeStyle: badges.BadgeStyle(
+                badgeStyle: const badges.BadgeStyle(
                     badgeColor: Colors.red, shape: badges.BadgeShape.instagram),
-                child: Icon(
+                child: const Icon(
                   Icons.notifications_none,
                   color: Colors.black,
                 )),
@@ -71,13 +73,13 @@ class _SecondScreenState extends State<SecondScreen> {
                           Row(
                             children: [
                               Image.asset("assets/images/heart.png"),
-                              Text("Heart Rate"),
+                              const Text("Heart Rate"),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 7,
                           ),
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "81",
@@ -92,7 +94,7 @@ class _SecondScreenState extends State<SecondScreen> {
                           ),
                         ],
                       ),
-                      VerticalDivider(
+                      const VerticalDivider(
                         width: 3,
                         thickness: 0.3,
                         color: Colors.grey,
@@ -104,13 +106,13 @@ class _SecondScreenState extends State<SecondScreen> {
                           Row(
                             children: [
                               Image.asset("assets/images/list.png"),
-                              Text(" To-do"),
+                              const Text(" To-do"),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 7,
                           ),
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "32,5",
@@ -124,7 +126,7 @@ class _SecondScreenState extends State<SecondScreen> {
                           ),
                         ],
                       ),
-                      VerticalDivider(
+                      const VerticalDivider(
                         width: 3,
                         thickness: 0.3,
                         color: Colors.grey,
@@ -136,13 +138,13 @@ class _SecondScreenState extends State<SecondScreen> {
                           Row(
                             children: [
                               Image.asset("assets/images/Vectorrrr.png"),
-                              Text(" Calo"),
+                              const Text(" Calo"),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 7,
                           ),
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "1000",
@@ -161,11 +163,11 @@ class _SecondScreenState extends State<SecondScreen> {
                 ),
               ),
             ),
-            Align(
+            const Align(
                 alignment: Alignment.centerLeft,
                 child: Padding(
                   padding:
-                      const EdgeInsets.only(left: 32.0,right: 32, top: 16),
+                      EdgeInsets.only(left: 32.0,right: 32, top: 16),
                   child: Text(
                     "Workout Programs",
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -176,7 +178,7 @@ class _SecondScreenState extends State<SecondScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -198,14 +200,14 @@ class _SecondScreenState extends State<SecondScreen> {
                               fontSize: 20, fontWeight: FontWeight.w300)),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 15,
                   ),
                   Container(
-                    margin: EdgeInsets.only(left: 9),
+                    margin: const EdgeInsets.only(left: 9),
                     width: 75,
                     height: 3,
-                    color: Color(0xff363F72),
+                    color: const Color(0xff363F72),
                   ),
                   Divider(
                     endIndent: 10,
@@ -214,12 +216,12 @@ class _SecondScreenState extends State<SecondScreen> {
                     height: 1,
                     color: Colors.grey.shade300,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                         color: Colors.grey.shade300,
                         borderRadius: BorderRadius.circular(15)),
@@ -227,7 +229,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       alignment: Alignment.topLeft,
                       children: [
                         Container(
-                          margin: EdgeInsets.all(15),
+                          margin: const EdgeInsets.all(15),
                           width: 400,
                           height: 174,
                           color: Colors.grey.shade300,
@@ -242,38 +244,38 @@ class _SecondScreenState extends State<SecondScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    child: Text(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(12),
+                                        border:
+                                            Border.all(color: Colors.black38)),
+                                    child: const Text(
                                       "7 days",
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(12),
-                                        border:
-                                            Border.all(color: Colors.black38)),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Text("Morning Yoga",
+                                  const Text("Morning Yoga",
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold)),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 5,
                                   ),
-                                  Text("Improve mental focus.",
+                                  const Text("Improve mental focus.",
                                       style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.w400)),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(
                                         Icons.access_time_rounded,
@@ -287,7 +289,7 @@ class _SecondScreenState extends State<SecondScreen> {
                                   )
                                 ],
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Image.asset("assets/images/[removal 2.png",
                                   width: 146),
                             ],
@@ -296,12 +298,12 @@ class _SecondScreenState extends State<SecondScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                         color: Colors.grey.shade300,
                         borderRadius: BorderRadius.circular(15)),
@@ -309,7 +311,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       alignment: Alignment.topLeft,
                       children: [
                         Container(
-                          margin: EdgeInsets.all(15),
+                          margin: const EdgeInsets.all(15),
                           width: 400,
                           height: 174,
                           color: Colors.grey.shade300,
@@ -324,38 +326,38 @@ class _SecondScreenState extends State<SecondScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    child: Text(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(12),
+                                        border:
+                                            Border.all(color: Colors.black38)),
+                                    child: const Text(
                                       "7 days",
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(12),
-                                        border:
-                                            Border.all(color: Colors.black38)),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Text("Morning Yoga",
+                                  const Text("Morning Yoga",
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold)),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 5,
                                   ),
-                                  Text("Improve mental focus.",
+                                  const Text("Improve mental focus.",
                                       style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.w400)),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(
                                         Icons.access_time_rounded,
@@ -378,12 +380,12 @@ class _SecondScreenState extends State<SecondScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: BoxDecoration(
                         color: Colors.grey.shade300,
                         borderRadius: BorderRadius.circular(15)),
@@ -391,7 +393,7 @@ class _SecondScreenState extends State<SecondScreen> {
                       alignment: Alignment.topLeft,
                       children: [
                         Container(
-                          margin: EdgeInsets.all(15),
+                          margin: const EdgeInsets.all(15),
                           width: 400,
                           height: 174,
                           color: Colors.grey.shade300,
@@ -406,38 +408,38 @@ class _SecondScreenState extends State<SecondScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Container(
-                                    child: Text(
+                                    padding: const EdgeInsets.all(5),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(12),
+                                        border:
+                                        Border.all(color: Colors.black38)),
+                                    child: const Text(
                                       "7 days",
                                       style: TextStyle(
                                           color: Colors.black,
                                           fontSize: 13,
                                           fontWeight: FontWeight.bold),
                                     ),
-                                    padding: EdgeInsets.all(5),
-                                    decoration: BoxDecoration(
-                                        color: Colors.white,
-                                        borderRadius: BorderRadius.circular(12),
-                                        border:
-                                        Border.all(color: Colors.black38)),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Text("Morning Yoga",
+                                  const Text("Morning Yoga",
                                       style: TextStyle(
                                           fontSize: 25,
                                           fontWeight: FontWeight.bold)),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 5,
                                   ),
-                                  Text("Improve mental focus.",
+                                  const Text("Improve mental focus.",
                                       style: TextStyle(
                                           fontSize: 13,
                                           fontWeight: FontWeight.w400)),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
-                                  Row(
+                                  const Row(
                                     children: [
                                       Icon(
                                         Icons.access_time_rounded,
@@ -472,9 +474,9 @@ class _SecondScreenState extends State<SecondScreen> {
           index = value;
           setState(() {});
         },
-        selectedItemColor:Color(0xff363F72),
+        selectedItemColor:const Color(0xff363F72),
         unselectedItemColor: Colors.grey,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: "home",
